@@ -4,7 +4,7 @@ use Bermuda\HTTP\Exception;
 
 class HttpException extends \Exception
 {
-    private static array $status = [
+    protected static array $phrases = [
         400 => 'Bad Request',
         401 => 'Unauthorized',
         402 => 'Payment Required',
@@ -68,6 +68,6 @@ class HttpException extends \Exception
             $statusCode = 500;
         }
       
-        parent::__construct($reasonPhrase ?? self::$status[$statusCode], $statusCode);
+        parent::__construct($reasonPhrase ?? self::$phrases[$statusCode], $statusCode);
     }
 }
