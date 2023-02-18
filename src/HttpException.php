@@ -4,7 +4,7 @@ use Bermuda\HTTP\Exception;
 
 class HttpException extends \Exception
 {
-    protected static array $phrases = [
+    protected const array $phrases = [
         400 => 'Bad Request',
         401 => 'Unauthorized',
         402 => 'Payment Required',
