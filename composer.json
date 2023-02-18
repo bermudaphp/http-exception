@@ -1,0 +1,12 @@
+{
+    "name": "bermudaphp/http-exception",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Bermuda\\HTTP\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0|^8.1"
+    }
+}
