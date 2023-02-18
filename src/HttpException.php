@@ -1,10 +1,10 @@
 <?php
 
-use Bermuda\HTTP\Exception;
+namespace Bermuda\HTTP\Exception;
 
 class HttpException extends \Exception
 {
-    protected const array $phrases = [
+    public const phrases = [
         400 => 'Bad Request',
         401 => 'Unauthorized',
         402 => 'Payment Required',
@@ -68,6 +68,6 @@ class HttpException extends \Exception
             $statusCode = 500;
         }
       
-        parent::__construct($reasonPhrase ?? self::$phrases[$statusCode], $statusCode);
+        parent::__construct($reasonPhrase ?? self::phrases[$statusCode], $statusCode);
     }
 }
