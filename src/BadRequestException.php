@@ -1,6 +1,6 @@
 <?php
 
-use Bermuda\HTTP\Exception;
+namespace Bermuda\HTTP\Exception;
 
 class BadRequestException extends HttpException
 {
