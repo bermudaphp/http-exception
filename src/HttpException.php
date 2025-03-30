@@ -62,7 +62,7 @@ class HttpException extends \Exception
         599 => 'Network connect timeout error', // Unknown
     ];
   
-    public function __construct(int $statusCode = 500, string $reasonPhrase = null)
+    public function __construct(int $statusCode = 500, ?string $reasonPhrase = null)
     {
         if ($statusCode < 400 || $statusCode >= 600) {
             $statusCode = 500;
